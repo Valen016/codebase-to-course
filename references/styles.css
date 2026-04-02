@@ -6,7 +6,7 @@
    ============================================================= */
 
 /* ── GOOGLE FONTS (loaded via _base.html <head>) ───────────────
-   Bricolage Grotesque · DM Sans · JetBrains Mono
+   Noto Serif SC · Noto Sans SC · JetBrains Mono
    ──────────────────────────────────────────────────────────── */
 
 /* ── DESIGN TOKENS ─────────────────────────────────────────── */
@@ -45,8 +45,8 @@
   --color-actor-5:        #2D8B55;
 
   /* FONTS */
-  --font-display: 'Bricolage Grotesque', Georgia, serif;
-  --font-body:    'DM Sans', -apple-system, sans-serif;
+  --font-display: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
+  --font-body:    'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   --font-mono:    'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
 
   /* TYPE SCALE */
@@ -355,7 +355,7 @@ p:last-child { margin-bottom: 0; }
   right: var(--space-3);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.1em;
   opacity: 0.5;
 }

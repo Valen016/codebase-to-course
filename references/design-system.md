@@ -70,11 +70,11 @@ Complete CSS design tokens for the course. Copy this entire `:root` block into t
 ```css
 :root {
   /* --- FONTS ---
-     Display: bold, geometric, personality-driven. NOT Inter/Roboto/Arial.
-     Body: readable with character. NOT system fonts.
+     Display: bold, distinctive, and Chinese-friendly.
+     Body: readable for long Simplified Chinese passages.
      Mono: developer-friendly with clear character distinction. */
-  --font-display:  'Bricolage Grotesque', Georgia, serif;
-  --font-body:     'DM Sans', -apple-system, sans-serif;
+  --font-display:  'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
+  --font-body:     'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   --font-mono:     'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
 
   /* --- TYPE SCALE (1.25 ratio) --- */
@@ -101,7 +101,7 @@ Complete CSS design tokens for the course. Copy this entire `:root` block into t
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 ```
 
 **Rules:**
@@ -238,8 +238,8 @@ document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
   <div class="nav-inner">
     <span class="nav-title">Course Title</span>
     <div class="nav-dots">
-      <button class="nav-dot" data-target="module-1" data-tooltip="Module 1 Name"
-              role="tab" aria-label="Module 1"></button>
+      <button class="nav-dot" data-target="module-1" data-tooltip="模块 1 名称"
+              role="tab" aria-label="第 1 模块"></button>
       <!-- one per module -->
     </div>
   </div>

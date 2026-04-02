@@ -5,7 +5,7 @@ Implementation patterns for every interactive element type used in courses. Pick
 > **Architecture note:** All CSS and JavaScript for these elements live in `references/styles.css` and `references/main.js`, which are copied verbatim into every course directory. When writing module HTML files, use only the HTML patterns below — do **not** inline `<style>` or `<script>` tags for these elements. The engines in `main.js` auto-initialize on page load by scanning for the relevant class names and `data-*` attributes described here.
 
 ## Table of Contents
-1. [Code ↔ English Translation Blocks](#code--english-translation-blocks)
+1. [Code ↔ Chinese Explanation Blocks](#code--chinese-explanation-blocks)
 2. [Multiple-Choice Quizzes](#multiple-choice-quizzes)
 3. [Drag-and-Drop Matching](#drag-and-drop-matching)
 4. [Group Chat Animation](#group-chat-animation)
@@ -25,15 +25,15 @@ Implementation patterns for every interactive element type used in courses. Pick
 
 ---
 
-## Code ↔ English Translation Blocks
+## Code ↔ Chinese Explanation Blocks
 
-The most important teaching element. Shows real code from the project on the left and a plain English translation on the right, line by line.
+The most important teaching element. Shows real code from the project on the left and a Chinese explanation on the right, line by line.
 
 **HTML:**
 ```html
 <div class="translation-block animate-in">
   <div class="translation-code">
-    <span class="translation-label">CODE</span>
+    <span class="translation-label">代码</span>
     <pre><code>
 <span class="code-line"><span class="code-keyword">const</span> response = <span class="code-keyword">await</span> <span class="code-function">fetch</span>(url, {</span>
 <span class="code-line">  <span class="code-property">method</span>: <span class="code-string">'POST'</span>,</span>
@@ -42,12 +42,12 @@ The most important teaching element. Shows real code from the project on the lef
     </code></pre>
   </div>
   <div class="translation-english">
-    <span class="translation-label">PLAIN ENGLISH</span>
+    <span class="translation-label">中文解释</span>
     <div class="translation-lines">
-      <p class="tl">Send a request to the URL and wait for a response...</p>
-      <p class="tl">We're sending data (POST), not just asking for it (GET)...</p>
-      <p class="tl">Include our API key so the server knows who we are...</p>
-      <p class="tl">End of the request setup.</p>
+      <p class="tl">向这个 URL 发出请求，并等待服务器返回结果。</p>
+      <p class="tl">这里用的是 POST，表示我们在提交数据，不只是读取数据。</p>
+      <p class="tl">带上 API key，这样服务器才知道请求方是谁。</p>
+      <p class="tl">这一行表示请求参数配置到这里结束。</p>
     </div>
   </div>
 </div>
@@ -92,7 +92,7 @@ The most important teaching element. Shows real code from the project on the lef
   top: var(--space-2);
   right: var(--space-3);
   font-size: var(--text-xs);
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.1em;
   opacity: 0.5;
 }
@@ -107,9 +107,9 @@ The most important teaching element. Shows real code from the project on the lef
 ```
 
 **Rules:**
-- Each English line should correspond to 1-2 code lines
-- Use conversational language, not technical jargon
-- Highlight the "why" not just the "what" — e.g., "Include our API key so the server knows who we are" not "Set the Authorization header"
+- Each Chinese line should correspond to 1-2 code lines
+- Use conversational Chinese, not translated jargon
+- Highlight the "why" not just the "what" — e.g., explain why the API key is included, not just that the header is set
 
 ---
 
@@ -635,7 +635,7 @@ For annotating config files, permissions, or settings:
 
 ## Glossary Tooltips
 
-The most important accessibility feature for non-technical learners. Any technical term in the course text should be wrapped in a tooltip that shows a plain-English definition on hover (desktop) or tap (mobile). The learner never has to leave the page or Google anything.
+The most important accessibility feature for non-technical learners. Any technical term in the course text should be wrapped in a tooltip that shows a plain-Chinese definition on hover (desktop) or tap (mobile). The learner never has to leave the page or Google anything.
 
 **HTML — mark up terms inline:**
 ```html

@@ -14,7 +14,7 @@
 
 ### Code Snippets (pre-extracted)
 
-Include the actual code the module will use in code↔English translation blocks. Copy-paste from the codebase with file path and line numbers. The writing agent will use these verbatim — it will NOT re-read the codebase.
+Include the actual code the module will use in code↔Chinese explanation blocks. Copy-paste from the codebase with file path and line numbers. The writing agent will use these verbatim — it will NOT re-read the codebase.
 
 File: src/example/file.ts (lines 12-24)
 [paste actual code here]
@@ -26,7 +26,7 @@ File: src/another/file.ts (lines 45-52)
 
 Check which elements this module needs. Include enough detail for the writing agent to build them.
 
-- [ ] **Code↔English translation** — which snippet(s) from above
+- [ ] **Code↔Chinese explanation** — which snippet(s) from above
 - [ ] **Quiz** — [number] questions, style: [scenario / debugging / architecture / tracing]. Brief description of each question's angle.
 - [ ] **Group chat animation** — actors: [list]. Message flow summary: [who says what to whom, in what order]
 - [ ] **Data flow animation** — actors: [list]. Steps: [sequence of highlights and packet movements]
